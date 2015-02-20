@@ -11,7 +11,7 @@
  * @see
  *   alpha_process().
  */
-function iisg_alpha_preprocess_page(&$vars) {
+function lanlh_alpha_preprocess_page(&$vars) {
   if (drupal_is_front_page()) {
     unset($vars['page']['content']['content']['content']['system_main']['default_message']);
   }

@@ -11,7 +11,7 @@
  * @see
  *   alpha_preprocess().
  */
-function iisg_alpha_preprocess_node(&$vars) {
+function lanlh_alpha_preprocess_node(&$vars) {
 
   if (isset($vars['content']['links']['node']['#links']['node-readmore'])) {
     if (!isset($langcode)) {

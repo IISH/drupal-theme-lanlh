@@ -4,7 +4,7 @@
 
 			<div class="slideshow-img">
 				<?php print render($content['field_image']); ?>
-				<img class="slideshow-overlay" src="<?php print base_path(); ?>sites/all/themes/iisg/images/hook-<?php print render($content['field_color']); ?>.png">
+				<img class="slideshow-overlay" src="<?php print base_path(); ?>sites/all/themes/lanlh/images/hook-<?php print render($content['field_color']); ?>.png">
 			</div>
 			<div<?php print $content_attributes; ?>>
 		    <h2><?php print $title ?></h2>

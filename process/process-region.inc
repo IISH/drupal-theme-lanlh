@@ -11,7 +11,7 @@
  * @see
  *   alpha_process().
  */
-function iisg_alpha_process_region(&$vars) {
+function lanlh_alpha_process_region(&$vars) {
   if (in_array($vars['elements']['#region'], array('branding', 'menu_first', 'menu_second', 'content'))) {
     $theme = alpha_get_theme();
 

@@ -16,7 +16,7 @@
  * Return a themed breadcrumb trail. (Taken from Zen)
  *
  * http://api.drupal.org/api/drupal/modules--system--system.api.php/function/hook_menu_breadcrumb_alter/7
- * if ($breadcrumb[0]['href'] == '<front>') { $breadcrumb[0]['title'] = 'iisg'; }
+ * if ($breadcrumb[0]['href'] == '<front>') { $breadcrumb[0]['title'] = 'lanlh'; }
  * en ook breadcrumb op home
  *
  * @param $variables
@@ -28,7 +28,7 @@
  * @return
  *   A string containing the breadcrumb output.
  */
-function iisg_breadcrumb($variables) {
+function lanlh_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
 
   // Return the breadcrumb with separators.
@@ -67,7 +67,7 @@ function iisg_breadcrumb($variables) {
 }
 
 // http://api.drupal.org/api/drupal/modules--field--field.module/function/theme_field/7
-function iisg_field__field_color($variables) {
+function lanlh_field__field_color($variables) {
   // Render the items.
   foreach ($variables['items'] as $delta => $item) {
     $output = drupal_render($item);
@@ -76,7 +76,7 @@ function iisg_field__field_color($variables) {
   return $output;
 }
 
-function iisg_field__field_slideshow_link($variables) {
+function lanlh_field__field_slideshow_link($variables) {
   // Render the items.
   foreach ($variables['items'] as $delta => $item) {
     $output = '<span class="read-more">'. drupal_render($item) .'</span>';
@@ -86,7 +86,7 @@ function iisg_field__field_slideshow_link($variables) {
 }
 
 // TODO print key instead of value (or value instead of #markup)
-function iisg_field__field_slideshow_image_size($variables) {
+function lanlh_field__field_slideshow_image_size($variables) {
   // Render the items.
   foreach ($variables['items'] as $delta => $item) {
     $output = 'img'. drupal_render($item); // A class should start with alpha char.
@@ -96,7 +96,7 @@ function iisg_field__field_slideshow_image_size($variables) {
 }
 
 // Hide current language from language switcher.
-function iisg_language_switch_links_alter(array &$links, $type, $path) {
+function lanlh_language_switch_links_alter(array &$links, $type, $path) {
   global $language;
   $current = $language->language;
   unset($links[$current]);
@@ -125,7 +125,7 @@ function print_node_view($node) {
 /*
  * Allow HTML in pager link.
  */
-function iisg_pager_link($variables) {
+function lanlh_pager_link($variables) {
   $text = $variables['text'];
   $page_new = $variables['page_new'];
   $element = $variables['element'];
@@ -176,7 +176,7 @@ function iisg_pager_link($variables) {
 /*
  * Use images for first, last, previous, next.
  */
-function iisg_pager($variables) {
+function lanlh_pager($variables) {
   $tags = $variables['tags'];
   $element = $variables['element'];
   $parameters = $variables['parameters'];
@@ -291,7 +291,7 @@ function iisg_pager($variables) {
 }
 
 
-function iisg_pager_first($variables) {
+function lanlh_pager_first($variables) {
   $text = $variables['text'];
   $element = $variables['element'];
   $parameters = $variables['parameters'];
@@ -308,7 +308,7 @@ function iisg_pager_first($variables) {
   return $output;
 }
 
-function iisg_pager_previous($variables) {
+function lanlh_pager_previous($variables) {
   $text = $variables['text'];
   $element = $variables['element'];
   $interval = $variables['interval'];
@@ -335,7 +335,7 @@ function iisg_pager_previous($variables) {
   return $output;
 }
 
-function iisg_pager_next($variables) {
+function lanlh_pager_next($variables) {
   $text = $variables['text'];
   $element = $variables['element'];
   $interval = $variables['interval'];
@@ -361,7 +361,7 @@ function iisg_pager_next($variables) {
   return $output;
 }
 
-function iisg_pager_last($variables) {
+function lanlh_pager_last($variables) {
   $text = $variables['text'];
   $element = $variables['element'];
   $parameters = $variables['parameters'];
@@ -381,7 +381,7 @@ function iisg_pager_last($variables) {
 /*
  * Make "Profile" translatable.
  */
-function iisg_preprocess_user_profile_category(&$variables) {
+function lanlh_preprocess_user_profile_category(&$variables) {
   $variables['title'] = t($variables['title']);
 }
 

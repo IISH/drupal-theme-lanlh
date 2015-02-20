@@ -11,7 +11,7 @@
  * @see
  *   alpha_process().
  */
-function iisg_alpha_process_zone(&$vars) {
+function lanlh_alpha_process_zone(&$vars) {
   if ($vars['elements']['#zone'] == 'preface') {
     $theme = alpha_get_theme();
     $vars['messages'] = $theme->page['messages'];
